@@ -36,6 +36,9 @@ module.exports={
                 'src': resolve('src'),
             }
         },
+        plugins:[
+            require('unplugin-element-plus/webpack')({}),
+        ],
     },
 
 }

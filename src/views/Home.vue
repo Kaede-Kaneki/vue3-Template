@@ -1,15 +1,15 @@
 <template>
     <div class="home">
-        <img alt="Vue logo" src="../assets/images/logo.png">
-        <p class="test">111111</p>
-        <span class="test">1234</span>
+        <el-button type="primary">111</el-button>
     </div>
 </template>
 
 <script>
+import {ElButton} from 'element-plus'
 export default {
     name: 'Home',
-    components: {}
+    components: {ElButton},
+    async created() {},
 }
 </script>
 
