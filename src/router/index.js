@@ -2,7 +2,7 @@ import { createRouter, createWebHistory,  } from 'vue-router'
 
 const routes = (s => [
   ...s.keys().map(k => s(k).default).flat(),
-  // { path: '*', redirect: '/' }
+  { path: '/:pathMatch(.*)', redirect: '/' }
 ])(require.context('./modules/', true, /\.js$/))
 
 const router = createRouter({
