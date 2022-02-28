@@ -20,5 +20,18 @@ export default {
 
 <style lang="scss">
 @import "src/assets/scss/base";
-
+html,
+body{
+    @extend %h100;
+}
+#app{
+    @extend %w100;
+    @extend %c3;
+}
+.view-wrap{
+    @extend %pr;
+    @extend %w100;
+    @extend %h100;
+    min-height: 100vh;
+}
 </style>
