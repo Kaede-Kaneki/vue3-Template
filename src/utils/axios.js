@@ -1,6 +1,8 @@
 import axios from "axios";
 // import {ElMessage} from "element-plus";
 
+const tokenType = 'Bearer'
+
 const Axios = axios.create({
     timeout:60000,
     withCredentials:false,
@@ -9,7 +11,6 @@ const Axios = axios.create({
 Axios.interceptors.request.use(
     (config) => {
         const {url, method, params, data, headers} = config
-        const tokenType = 'Bearer'
         headers['Authorization'] = tokenType
         console.log(`${url} [${method}] 请求参数=>`, method === 'get' ? params : data)
         return config
@@ -31,4 +32,10 @@ Axios.interceptors.response.use(
     }
 )
 
-export default Axios
+export default (url,data={},method)=>{
+    return Axios({
+        url,
+        method,
+        [method === 'get' ? 'params':'data']:data,
+    }).finally(()=>{})
+}

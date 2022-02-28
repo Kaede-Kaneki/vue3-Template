@@ -12,7 +12,6 @@
 
 <script>
 import TransitionMixin from 'src/mixins/transition.mixin'
-
 export default {
     mixins: [TransitionMixin]
 }
