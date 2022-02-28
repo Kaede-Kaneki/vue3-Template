@@ -1,19 +1,20 @@
 <template>
-  <div id="app">
-    <transition :name="transitionName">
-      <router-view class="view-wrap" v-slot="{Component}">
-        <keep-alive>
-          <component :is="Component"></component>
-        </keep-alive>
-      </router-view>
-    </transition>
-  </div>
+    <div id="app">
+        <router-view class="view-wrap" v-slot="{Component}">
+            <transition :name="transitionName">
+                <keep-alive>
+                    <component :is="Component"></component>
+                </keep-alive>
+            </transition>
+        </router-view>
+    </div>
 </template>
 
 <script>
 import TransitionMixin from 'src/mixins/transition.mixin'
+
 export default {
-  mixins:[TransitionMixin]
+    mixins: [TransitionMixin]
 }
 </script>
 

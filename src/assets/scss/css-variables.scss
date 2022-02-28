@@ -1,0 +1,30 @@
+//@mixin root() {
+//    :root{
+//        @content;
+//    }
+//}
+//
+//@include root() {
+//
+//}
+
+:root{
+    // Component Colors
+    --as-primary-color: #0095d9;
+    --as-success-color: #67C23A;
+    --as-danger-color: #fc3939;
+    --as-warning-color: #ff9523;
+    --as-info-color: #969799;
+    --as-text-color: #323233;
+    --as-active-color: #f2f3f5;
+    --as-background-color: #f2f3f4;
+    --as-background-color-light: #fff;
+    --as-text-link-color: #576b95;
+
+    // Border
+    --as-border-color: #dcdee0;
+
+    // as-view
+    --as-view-nav-bar-background-color: #fff;
+    --as-view-nav-bar-text-color: #333;
+}
